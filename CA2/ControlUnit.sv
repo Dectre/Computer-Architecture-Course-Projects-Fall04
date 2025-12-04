@@ -20,7 +20,7 @@
 `define ALU_XOR 3'b100
 `define ALU_SLT 3'b101
 
-module ControlUnit(op, funct3, funct7_5, Zero, PCSrc, ResultSrc, MemWrite, ALUControl, ALUSrc, ImmSrc, RegWrite);
+module ControlUnit(op, funct3, funct7_5, Zero, PCSrc, ResultSrc, MemWrite, ALUControl, ALUSrc, ImmSrc, RegWrite, Ready);
     input  [6:0] op;
     input  [2:0] funct3;
     input  [6:0] funct7_5;
@@ -28,6 +28,7 @@ module ControlUnit(op, funct3, funct7_5, Zero, PCSrc, ResultSrc, MemWrite, ALUCo
     output logic [1:0] PCSrc, ResultSrc;
     output logic MemWrite, ALUSrc, RegWrite;
     output logic [2:0] ALUControl, ImmSrc;
+    output logic Ready;
 
     always @(op, funct3, funct7_5, Zero) begin
         {PCSrc, ResultSrc, MemWrite, ALUSrc, RegWrite, ALUControl, ImmSrc} = 13'b0;
@@ -104,6 +105,7 @@ module ControlUnit(op, funct3, funct7_5, Zero, PCSrc, ResultSrc, MemWrite, ALUCo
                 ALUSrc    = 1'b1;
                 RegWrite  = 1'b1;
             end
+            default: Ready = 1'b1;
         endcase
     end
 

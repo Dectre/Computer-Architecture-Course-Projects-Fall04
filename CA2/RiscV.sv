@@ -1,7 +1,9 @@
 `timescale 1ns/1ns
 
-module RiscV(clk, rst);
+module RiscV(clk, rst, Ready);
     input clk, rst;
+    output Ready;
+
     wire MemWrite, ALUSrc, RegWrite, Zero;
     wire [1:0] PCSrc, ResultSrc;
     wire [2:0] ALUControl, ImmSrc;
@@ -13,9 +15,10 @@ module RiscV(clk, rst);
     .ALUControl(ALUControl), .ALUSrc(ALUSrc), .ImmSrc(ImmSrc), 
     .RegWrite(RegWrite), 
     .op(op), .funct3(funct3), .funct7_5(funct7_5), .Zero(Zero));
+
     ControlUnit CU(.op(op), .funct3(funct3), .funct7_5(funct7_5), .Zero(Zero), 
     .PCSrc(PCSrc), .ResultSrc(ResultSrc), .MemWrite(MemWrite), 
     .ALUControl(ALUControl), .ALUSrc(ALUSrc), 
-    .ImmSrc(ImmSrc), .RegWrite(RegWrite));
+    .ImmSrc(ImmSrc), .RegWrite(RegWrite), .Ready(Ready));
 
 endmodule
