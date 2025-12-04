@@ -41,26 +41,30 @@ def enc_S(funct3, opcode, rs1, rs2, imm):
 
 
 def enc_B(funct3, opcode, rs1, rs2, offset_bytes):
-    imm = offset_bytes >> 1
-    imm &= 0x1FFF
-    b12 = (imm >> 12) & 1
-    b10_5 = (imm >> 5) & 0x3F
-    b4_1 = (imm >> 1) & 0xF
-    b11 = (imm >> 11) & 1
-    return (b12 << 31) | (b10_5 << 25) | ((rs2 & 0x1F) << 20) | \
+    off = offset_bytes & 0x1FFF  # 13-bit signed offset in BYTES
+
+    bit12  = (off >> 12) & 1
+    bit11  = (off >> 11) & 1
+    bits10_5 = (off >> 5) & 0x3F
+    bits4_1  = (off >> 1) & 0x0F
+
+    return (bit12 << 31) | (bits10_5 << 25) | ((rs2 & 0x1F) << 20) | \
            ((rs1 & 0x1F) << 15) | ((funct3 & 0x7) << 12) | \
-           (b4_1 << 8) | (b11 << 7) | (opcode & 0x7F)
+           (bits4_1 << 8) | (bit11 << 7) | (opcode & 0x7F)
+
 
 
 def enc_J(opcode, rd, offset_bytes):
-    imm = offset_bytes >> 1
-    imm &= 0x1FFFFF
-    b20 = (imm >> 20) & 1
-    b10_1 = (imm >> 1) & 0x3FF
-    b11 = (imm >> 11) & 1
+    imm = offset_bytes & 0x1FFFFF
+
+    b20    = (imm >> 20) & 1
+    b10_1  = (imm >> 1) & 0x3FF
+    b11    = (imm >> 11) & 1
     b19_12 = (imm >> 12) & 0xFF
+
     return (b20 << 31) | (b10_1 << 21) | (b11 << 20) | \
            (b19_12 << 12) | ((rd & 0x1F) << 7) | (opcode & 0x7F)
+
 
 
 def enc_U(opcode, rd, imm):
