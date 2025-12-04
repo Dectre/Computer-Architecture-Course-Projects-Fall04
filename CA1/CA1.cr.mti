@@ -1,0 +1,78 @@
+{D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux4to1.sv} {1 {vlog -work work -sv -stats=none {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux4to1.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux4to1
+
+Top level modules:
+	mux4to1
+
+} {} {}} {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/alu.sv} {1 {vlog -work work -sv -stats=none {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/alu.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module alu12
+
+Top level modules:
+	alu12
+
+} {} {}} {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/rom.sv} {1 {vlog -work work -sv -stats=none {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/rom.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module rom
+
+Top level modules:
+	rom
+
+} {} {}} {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg8.sv} {1 {vlog -work work -sv -stats=none {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg8.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module register_8
+
+Top level modules:
+	register_8
+
+} {} {}} {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/counter3.sv} {1 {vlog -work work -sv -stats=none {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/counter3.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module counter_3
+
+Top level modules:
+	counter_3
+
+} {} {}} {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF.sv} {1 {vlog -work work -sv -stats=none {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LIF
+
+Top level modules:
+	LIF
+
+} {} {}} {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/datapath.sv} {1 {vlog -work work -sv -stats=none {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/datapath.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module datapath
+
+Top level modules:
+	datapath
+
+} {} {}} {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux2to1.sv} {1 {vlog -work work -sv -stats=none {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux2to1.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux2to1
+
+Top level modules:
+	mux2to1
+
+} {} {}} {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/controller.sv} {1 {vlog -work work -sv -stats=none {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/controller.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module controller
+
+Top level modules:
+	controller
+
+} {} {}} {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF_tb.sv} {1 {vlog -work work -sv -stats=none {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LIF_tb
+
+Top level modules:
+	LIF_tb
+
+} {} {}} {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg12.sv} {1 {vlog -work work -sv -stats=none {D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg12.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module register_12
+
+Top level modules:
+	register_12
+
+} {} {}}

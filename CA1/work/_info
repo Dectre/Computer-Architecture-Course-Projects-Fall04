@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
@@ -8,3 +9,330 @@ z2
 !i10f 100
 cModel Technology
 dD:/Modelsim
+valu
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1761409748
+!i10b 1
+!s100 UYi<_hcZM]gl=o4Oz]DFO2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IJA>Ine>IDzEl8@9;khMha1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z3 dD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1
+w1761409723
+Z4 8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/alu.sv
+Z5 FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/alu.sv
+!i122 0
+Z6 L0 1 16
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1761409748.000000
+Z8 !s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/alu.sv|
+Z9 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/alu.sv|
+!i113 1
+Z10 o-work work -sv
+Z11 tCvgOpt 0
+valu12
+R0
+Z12 !s110 1761454353
+!i10b 1
+!s100 AB0C5PO9ENM4?149^`Z2F1
+R1
+II><Eg4XfD6AoQc<I679PX3
+R2
+S1
+R3
+w1761427559
+R4
+R5
+!i122 279
+Z13 L0 1 15
+R7
+r1
+!s85 0
+31
+!s108 1761454352.000000
+R8
+R9
+!i113 1
+R10
+R11
+vcontroller
+R0
+!s110 1761466596
+!i10b 1
+!s100 c`QXMiLX<3UKmm;mg7W2P2
+R1
+IQA0ZfI1;[5aFa4PGb`V4^1
+R2
+S1
+R3
+w1761466593
+8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/controller.sv
+FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/controller.sv
+!i122 318
+L0 22 89
+R7
+r1
+!s85 0
+31
+!s108 1761466596.000000
+!s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/controller.sv|
+!i113 1
+R10
+R11
+vcounter_3
+R0
+R12
+!i10b 1
+!s100 ei0;?hjI^2mc?H_CHX<Th2
+R1
+IoIlO>>RH`XWOA[aPh1WJH2
+R2
+S1
+R3
+w1761429061
+8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/counter3.sv
+FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/counter3.sv
+!i122 280
+R13
+R7
+r1
+!s85 0
+31
+Z14 !s108 1761454353.000000
+!s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/counter3.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/counter3.sv|
+!i113 1
+R10
+R11
+vdatapath
+R0
+!s110 1761466187
+!i10b 1
+!s100 4=RIRT`n[mkgMSoz^JAfF3
+R1
+Inh`@Gk0[SC^?AOW_8gzRz2
+R2
+S1
+R3
+w1761465848
+8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/datapath.sv
+FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/datapath.sv
+!i122 315
+L0 1 39
+R7
+r1
+!s85 0
+31
+!s108 1761466187.000000
+!s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/datapath.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/datapath.sv|
+!i113 1
+R10
+R11
+vdff
+R0
+!s110 1763545174
+!i10b 1
+!s100 >eYRImBIJVaN2Df2SC1cR2
+R1
+I<gQKLCE][CHb025gV;1Fg3
+R2
+S1
+R3
+w1763545157
+8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/dff.sv
+FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/dff.sv
+!i122 324
+L0 1 12
+R7
+r1
+!s85 0
+31
+!s108 1763545173.000000
+!s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/dff.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/dff.sv|
+!i113 1
+R10
+R11
+vLIF
+R0
+!s110 1761456417
+!i10b 1
+!s100 ;g4]z;c@]ThePn[3K4`R^3
+R1
+INa3Z^@2jRYBJCP6=ez;9m3
+R2
+S1
+R3
+w1761456415
+8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF.sv
+FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF.sv
+!i122 300
+L0 1 35
+R7
+r1
+!s85 0
+31
+!s108 1761456417.000000
+!s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF.sv|
+!i113 1
+R10
+R11
+n@l@i@f
+vLIF_tb
+R0
+!s110 1761549756
+!i10b 1
+!s100 R<=_LE92daVnhXklGF>WA0
+R1
+IeoMhhPW=[U?1:ZWC;`Nlj3
+R2
+S1
+R3
+w1761549755
+8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF_tb.sv
+FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF_tb.sv
+!i122 323
+L0 3 57
+R7
+r1
+!s85 0
+31
+!s108 1761549756.000000
+!s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/LIF_tb.sv|
+!i113 1
+R10
+R11
+n@l@i@f_tb
+vmux2to1
+R0
+R12
+!i10b 1
+!s100 1B19f3M<nU5=MfB8M7H2M0
+R1
+I;IJBeTTFA[Wd^b2h_5gcZ0
+R2
+S1
+R3
+w1761428812
+8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux2to1.sv
+FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux2to1.sv
+!i122 283
+L0 1 13
+R7
+r1
+!s85 0
+31
+R14
+!s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux2to1.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux2to1.sv|
+!i113 1
+R10
+R11
+vmux4to1
+R0
+R12
+!i10b 1
+!s100 CgSLNdS<@WD@DoJG2Kif11
+R1
+ImnLVoFecPV4di1nUTY:R[1
+R2
+S1
+R3
+w1761428823
+8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux4to1.sv
+FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux4to1.sv
+!i122 284
+R13
+R7
+r1
+!s85 0
+31
+R14
+!s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux4to1.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/mux4to1.sv|
+!i113 1
+R10
+R11
+vregister_12
+R0
+R12
+!i10b 1
+!s100 F4G<9L8MJON^KM1;hAL6L1
+R1
+I9Y5Q4z=?n2F`QZ:LZGRhS1
+R2
+S1
+R3
+w1761428282
+8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg12.sv
+FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg12.sv
+!i122 286
+R13
+R7
+r1
+!s85 0
+31
+R14
+!s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg12.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg12.sv|
+!i113 1
+R10
+R11
+vregister_8
+R0
+R12
+!i10b 1
+!s100 V:Sh8^BTg30AK07TK>_km1
+R1
+I1L[QcWWG_41L3:zR[`RN[0
+R2
+S1
+R3
+w1761427581
+8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg8.sv
+FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg8.sv
+!i122 285
+L0 1 11
+R7
+r1
+!s85 0
+31
+R14
+!s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg8.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/reg8.sv|
+!i113 1
+R10
+R11
+vrom
+R0
+R12
+!i10b 1
+!s100 POVWYYj@fa`O8E<[HHOXo0
+R1
+I:YiokNSZM88Mcj>`Tg`m>0
+R2
+S1
+R3
+w1761428804
+8D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/rom.sv
+FD:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/rom.sv
+!i122 287
+R6
+R7
+r1
+!s85 0
+31
+R14
+!s107 D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/rom.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/University/5th Semester/Digital Systems II/Computer Assignments/CA1/rom.sv|
+!i113 1
+R10
+R11
