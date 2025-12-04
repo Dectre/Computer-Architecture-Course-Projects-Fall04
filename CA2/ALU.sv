@@ -1,7 +1,7 @@
-module ALU(SrcA, SrcB, ALUControl, ALUResult, zero);
-    input signed [31:0] SrcA, SrcB;
-    input [2:0] ALUControl;
-    output logic signed [31:0] ALUResult;
+module ALU(A, B, select, result, zero);
+    input signed [31:0] A, B;
+    input [2:0] select;
+    output logic signed [31:0] result;
     output logic zero;
     parameter ADD = 3'b000,
               SUB = 3'b001,
@@ -9,17 +9,17 @@ module ALU(SrcA, SrcB, ALUControl, ALUResult, zero);
               OR  = 3'b011,
               XOR = 3'b100,
               SLT = 3'b101;
-    always @(ALUControl, SrcA, SrcB) begin
-        case (ALUControl)
-            ADD: ALUResult = SrcA + SrcB;
-            SUB: ALUResult = SrcA - SrcB; 
-            AND: ALUResult = SrcA & SrcB;
-            OR: ALUResult = SrcA | SrcB;
-            XOR: ALUResult = SrcA ^ SrcB;
-            SLT: ALUResult = SrcA < SrcB ? 32'b1 : 32'b0;
-            default: ALUResult = 32'b0;
+    always @(select, A, B) begin
+        case (select)
+            ADD: result = A + B;
+            SUB: result = A - B; 
+            AND: result = A & B;
+            OR: result = A | B;
+            XOR: result = A ^ B;
+            SLT: result = A < B ? 32'b1 : 32'b0;
+            default: result = 32'b0;
         endcase
     end
 
-    assign zero = (ALUResult == 0); 
+    assign zero = (result == 0); 
 endmodule
