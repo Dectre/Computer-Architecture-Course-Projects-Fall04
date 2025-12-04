@@ -1,0 +1,502 @@
+# Compile of Adder.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of ControlUnit.sv was successful.
+# Compile of DataMemory.sv was successful.
+# Compile of Datapath.sv was successful.
+# Compile of ImmediateExtend.sv was successful.
+# Compile of InstructionMemory.sv was successful.
+# Compile of Mux.sv was successful.
+# Compile of Register.sv was successful.
+# Compile of RegisterFile.sv failed with 1 errors.
+# Compile of RiscV.sv was successful.
+# Compile of RiscV_TB.sv was successful.
+# 12 compiles, 1 failed with 1 error.
+# Compile of RegisterFile.sv failed with 1 errors.
+# Compile of RegisterFile.sv was successful.
+vsim -gui work.RiscV_TB
+# vsim -gui work.RiscV_TB 
+# Start time: 23:21:18 on Dec 04,2025
+# Loading sv_std.std
+# Loading work.RiscV_TB
+# Loading work.RiscV
+# Loading work.Datapath
+# Loading work.Mux_4to1_32
+# Loading work.Register_32
+# Loading work.InstructionMemory
+# Loading work.Adder_32
+# Loading work.RegisterFile
+# Loading work.ImmediateExtend
+# Loading work.Mux_2to1_32
+# Loading work.ALU
+# ** Error: (vsim-3033) Instantiation of 'Adder' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /RiscV_TB/UUT/DP File: D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/Datapath.sv Line: 32
+#         Searched libraries:
+#             D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/work
+# Loading work.DataMemory
+# Loading work.ControlUnit
+# Error loading design
+# End time: 23:21:19 on Dec 04,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 5
+# Compile of Datapath.sv was successful.
+vsim -gui work.RiscV_TB
+# vsim -gui work.RiscV_TB 
+# Start time: 23:21:53 on Dec 04,2025
+# Loading sv_std.std
+# Loading work.RiscV_TB
+# Loading work.RiscV
+# Loading work.Datapath
+# Loading work.Mux_4to1_32
+# Loading work.Register_32
+# Loading work.InstructionMemory
+# Loading work.Adder_32
+# Loading work.RegisterFile
+# Loading work.ImmediateExtend
+# Loading work.Mux_2to1_32
+# Loading work.ALU
+# Loading work.DataMemory
+# Loading work.ControlUnit
+add wave -position insertpoint  \
+sim:/RiscV_TB/clk \
+sim:/RiscV_TB/rst \
+sim:/RiscV_TB/Ready
+run -all
+# Break key hit
+# Simulation stop requested.
+# Compile of ControlUnit.sv failed with 3 errors.
+# Compile of RiscV.sv was successful.
+# 2 compiles, 1 failed with 3 errors.
+# Compile of ControlUnit.sv failed with 1 errors.
+# Compile of ControlUnit.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.RiscV
+# Loading work.ControlUnit
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 230 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+add wave -position end  sim:/RiscV_TB/UUT/DP/DM/memory[0]
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 230 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+add wave -position insertpoint  \
+sim:/RiscV_TB/UUT/DP/PCSrc \
+sim:/RiscV_TB/UUT/DP/ResultSrc \
+sim:/RiscV_TB/UUT/DP/ALUControl \
+sim:/RiscV_TB/UUT/DP/ImmSrc \
+sim:/RiscV_TB/UUT/DP/op \
+sim:/RiscV_TB/UUT/DP/funct3 \
+sim:/RiscV_TB/UUT/DP/funct7_5 \
+sim:/RiscV_TB/UUT/DP/Zero \
+sim:/RiscV_TB/UUT/DP/PC_next \
+sim:/RiscV_TB/UUT/DP/PC_current \
+sim:/RiscV_TB/UUT/DP/Instr \
+sim:/RiscV_TB/UUT/DP/PCPlus4 \
+sim:/RiscV_TB/UUT/DP/ImmExt \
+sim:/RiscV_TB/UUT/DP/SrcA \
+sim:/RiscV_TB/UUT/DP/SrcB \
+sim:/RiscV_TB/UUT/DP/WriteData \
+sim:/RiscV_TB/UUT/DP/ALUResult \
+sim:/RiscV_TB/UUT/DP/PCTarget \
+sim:/RiscV_TB/UUT/DP/ReadData \
+sim:/RiscV_TB/UUT/DP/Result \
+sim:/RiscV_TB/UUT/DP/Imm \
+sim:/RiscV_TB/UUT/DP/rs1 \
+sim:/RiscV_TB/UUT/DP/rs2 \
+sim:/RiscV_TB/UUT/DP/rd
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 230 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 230 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+run -all
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 30 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 230 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+restart
+# Compile of DataMemory.sv was successful.
+# Compile of InstructionMemory.sv was successful.
+# 2 compiles, 0 failed with no errors.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 230 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+# Break key hit
+quit -sim
+vsim -gui work.RiscV_TB
+# End time: 23:44:11 on Dec 04,2025, Elapsed time: 0:22:18
+# Errors: 0, Warnings: 2
+# vsim -gui work.RiscV_TB 
+# Start time: 23:44:11 on Dec 04,2025
+# Loading sv_std.std
+# Loading work.RiscV_TB
+# Loading work.RiscV
+# Loading work.Datapath
+# Loading work.Mux_4to1_32
+# Loading work.Register_32
+# Loading work.InstructionMemory
+# Loading work.Adder_32
+# Loading work.RegisterFile
+# Loading work.ImmediateExtend
+# Loading work.Mux_2to1_32
+# Loading work.ALU
+# Loading work.DataMemory
+# Loading work.ControlUnit
+add wave -position insertpoint  \
+sim:/RiscV_TB/clk \
+sim:/RiscV_TB/rst \
+sim:/RiscV_TB/Ready
+run -all
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 230 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+add wave -position insertpoint  \
+sim:/RiscV_TB/UUT/DP/MemWrite \
+sim:/RiscV_TB/UUT/DP/ALUSrc \
+sim:/RiscV_TB/UUT/DP/RegWrite \
+sim:/RiscV_TB/UUT/DP/PCSrc \
+sim:/RiscV_TB/UUT/DP/ResultSrc \
+sim:/RiscV_TB/UUT/DP/ALUControl \
+sim:/RiscV_TB/UUT/DP/ImmSrc \
+sim:/RiscV_TB/UUT/DP/op \
+sim:/RiscV_TB/UUT/DP/funct3 \
+sim:/RiscV_TB/UUT/DP/funct7_5 \
+sim:/RiscV_TB/UUT/DP/Zero \
+sim:/RiscV_TB/UUT/DP/PC_next \
+sim:/RiscV_TB/UUT/DP/PC_current \
+sim:/RiscV_TB/UUT/DP/Instr \
+sim:/RiscV_TB/UUT/DP/PCPlus4 \
+sim:/RiscV_TB/UUT/DP/ImmExt \
+sim:/RiscV_TB/UUT/DP/SrcA \
+sim:/RiscV_TB/UUT/DP/SrcB \
+sim:/RiscV_TB/UUT/DP/WriteData \
+sim:/RiscV_TB/UUT/DP/ALUResult \
+sim:/RiscV_TB/UUT/DP/PCTarget \
+sim:/RiscV_TB/UUT/DP/ReadData \
+sim:/RiscV_TB/UUT/DP/Result \
+sim:/RiscV_TB/UUT/DP/Imm \
+sim:/RiscV_TB/UUT/DP/rs1 \
+sim:/RiscV_TB/UUT/DP/rs2 \
+sim:/RiscV_TB/UUT/DP/rd
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 230 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+# Compile of DataMemory.sv was successful.
+# Compile of Datapath.sv was successful.
+# Compile of InstructionMemory.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Datapath
+# Loading work.InstructionMemory
+# Loading work.DataMemory
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 950 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+# Compile of DataMemory.sv was successful.
+# Compile of Datapath.sv was successful.
+# Compile of InstructionMemory.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Datapath
+# Loading work.InstructionMemory
+# Loading work.DataMemory
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -continue
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of DataMemory.sv was successful.
+# Compile of InstructionMemory.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.InstructionMemory
+# Loading work.DataMemory
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break key hit
+# Simulation stop requested.
+# Break key hit
+# Break key hit
+restart
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break key hit
+# Simulation stop requested.
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break key hit
+# Simulation stop requested.
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break key hit
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 9
+# Compile of DataMemory.sv was successful.
+# Compile of InstructionMemory.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.InstructionMemory
+# Loading work.DataMemory
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# A time value could not be extracted from the current line
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# Break key hit
+run
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Break key hit
+# Simulation stop requested.
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint  \
+{sim:/RiscV_TB/UUT/DP/RF/registers[12]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[11]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[10]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[9]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[8]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[7]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[6]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[5]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[4]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[3]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[2]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[1]} \
+{sim:/RiscV_TB/UUT/DP/RF/registers[0]}
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run 1000
+run 1000
+run 1000
+run 1000
+run 1000
+run 1000000
+# Compile of ALU.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ALU
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 7510 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 83630 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 83630 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+restart
+# Compile of ALU.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ALU
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 83630 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 83630 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 182710 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 83630 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 83710 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+# Compile of ALU.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ALU
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv(11)
+#    Time: 83710 ns  Iteration: 0  Instance: /RiscV_TB
+# Break in Module RiscV_TB at D:/University/5th Semester/Digital Systems II/Computer Assignments/CA2/RiscV_TB.sv line 11
+run -step
+# End time: 02:49:31 on Dec 05,2025, Elapsed time: 3:05:20
+# Errors: 0, Warnings: 1
