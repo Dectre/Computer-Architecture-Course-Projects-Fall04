@@ -1,4 +1,4 @@
-module RegisterFile(A1, A2, A3, WD3, WE3, clk, rst, RD1, RD2)
+module RegisterFile(A1, A2, A3, WD3, WE3, clk, rst, RD1, RD2);
     input clk, rst;
     input [4:0] A1, A2, A3;
     input [31:0] WD3;

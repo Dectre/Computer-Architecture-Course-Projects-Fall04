@@ -29,7 +29,7 @@ module Datapath(clk, rst, PCSrc, ResultSrc, MemWrite, ALUControl, ALUSrc, ImmSrc
     ImmediateExtend immExt(.immediate(Imm), .select(ImmSrc), .extended(ImmExt));
     Mux_2to1_32 ALUSrcMux(.A(WriteData), .B(ImmExt), .Sel(ALUSrc), .Y(SrcB));
     ALU ALU_Unit(.A(SrcA), .B(SrcB), .select(ALUControl), .result(ALUResult), .zero(Zero));
-    Adder PCTargetAdder(.A(PC_current), .B(ImmExt), .Sum(PCTarget));
+    Adder_32 PCTargetAdder(.A(PC_current), .B(ImmExt), .Sum(PCTarget));
     DataMemory DM(.clk(clk), .rst(rst), .A(ALUResult), .WD(WriteData), .WE(MemWrite), .RD(ReadData));
     Mux_4to1_32 resultMux(.A(ALUResult), .B(ReadData), .C(PCPlus4), .D(PC_current), .Sel(ResultSrc), .Y(Result));
 endmodule

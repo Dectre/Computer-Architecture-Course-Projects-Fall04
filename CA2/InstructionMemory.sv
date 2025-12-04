@@ -6,5 +6,5 @@ module InstructionMemory(A, RD);
     initial begin
         $readmemh("instructions.mem", memory);
     end
-    assign RD = memory[{A[31:2], 2'b00}];
+    assign RD = memory[A[31:2]];
 endmodule

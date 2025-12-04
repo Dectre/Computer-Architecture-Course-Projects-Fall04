@@ -5,13 +5,13 @@ module DataMemory(A, WD, WE, clk, rst, RD);
     output logic signed [31:0] RD;
 
     logic signed [31:0] memory [8191:0];
-    always @(posedge clk ,posedge rst) begin
+    always @(posedge clk or posedge rst) begin
         if (rst)
             $readmemh("data.mem", memory);
 		else if (WE) 
-            memory[memory[{A[31:2], 2'b00}]] = WD;
+            memory[A[31:2]] = WD;
 	end
-    assign RD = memory[{A[31:2], 2'b00}];
+    assign RD = memory[A[31:2]];
 
 endmodule
     
