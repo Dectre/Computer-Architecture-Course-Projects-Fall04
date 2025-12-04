@@ -1,17 +1,34 @@
 def to_twos_complement_32(n):
     return n & 0xFFFFFFFF
 
-data = [
-    12, -5, 33, 7, 0, 19, -12, 44, 8, -1,
-    3, 27, 15, 2, -8, 6, 9, -3, 25, 1
-]
 
-if len(data) != 20:
-    raise ValueError("Array must contain exactly 20 elements.")
+INPUT_FILE = "Assembly/array_of_integers.txt"
+OUTPUT_FILE = "data.mem"
 
-with open("data.mem", "w") as f:
-    for n in data:
-        hexval = f"{to_twos_complement_32(n):08x}"
-        f.write(hexval + "\n")
 
-print("data.mem generated successfully.")
+def read_numbers(path):
+    numbers = []
+    with open(path, "r") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            numbers.append(int(line))
+    return numbers
+
+
+def write_data_mem(numbers, path):
+    with open(path, "w") as f:
+        for n in numbers:
+            hexval = f"{to_twos_complement_32(n):08x}"
+            f.write(hexval + "\n")
+    print(f"{path} generated successfully with {len(numbers)} entries.")
+
+
+def main():
+    nums = read_numbers(INPUT_FILE)
+    write_data_mem(nums, OUTPUT_FILE)
+
+
+if __name__ == "__main__":
+    main()
