@@ -1,0 +1,17 @@
+module DataMemory(A, WD, WE, clk, rst, RD);
+    input [31:0] A;
+    input signed [31:0] WD;
+    input WE, clk, rst;
+    output logic signed [31:0] RD;
+
+    logic signed [31:0] memory [8191:0];
+    always @(posedge clk ,posedge rst) begin
+        if (rst)
+            $readmemh("data.mem", memory);
+		else if (WE) 
+            memory[memory[{A[31:2], 2'b00}]] = WD;
+	end
+    assign RD = memory[{A[31:2], 2'b00}];
+
+endmodule
+    
