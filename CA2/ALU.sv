@@ -16,7 +16,7 @@ module ALU(SrcA, SrcB, ALUControl, ALUResult, zero);
             AND: ALUResult = SrcA & SrcB;
             OR: ALUResult = SrcA | SrcB;
             XOR: ALUResult = SrcA ^ SrcB;
-            SLT: ALUResult = SrcA < SrcB;
+            SLT: ALUResult = SrcA < SrcB ? 32'b1 : 32'b0;
             default: ALUResult = 32'b0;
         endcase
     end
