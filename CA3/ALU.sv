@@ -20,7 +20,7 @@ module ALU(A, B, select, result, zero);
             NOT: result = ~A;
             IN1: result = A;
             IN2: result = B;
-            default: result = N'b0;
+            default: result = (N-1)'b0;
         endcase
     end
 
