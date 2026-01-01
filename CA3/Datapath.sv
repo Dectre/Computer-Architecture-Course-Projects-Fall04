@@ -1,6 +1,6 @@
-module Datapath(clk, rst, PCLoad, AdrSrc, MemWrite, IRWrite, WriteTo, RFWrite, WriteSrc, SrcA, SrcB, AluOP, PCSrc, op, func, Zero, nop, );
+module Datapath(clk, rst, PCLoad, AdrSrc, MemWrite, IRWrite, WriteTo, RFWrite, WriteSrc, SrcA, SrcB, AluOP, PCSrc, op, func, Zero, nop);
     input clk, rst;
-    input PCLoad, AdrSrc, MemWrite, IRWrite , RFWrite, WriteSrc, SrcA;
+    input PCLoad, AdrSrc, MemWrite, IRWrite , WriteTo, RFWrite, WriteSrc, SrcA;
     input [1:0] SrcB, PCSrc;
     input [2:0] AluOP;
     output [3:0] op;
