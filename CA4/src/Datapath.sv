@@ -2,7 +2,7 @@ module Datapath(clk, rst,
                 ImmSrc, ALUSrc, ALUControl, Branch, Jump, MemWrite, ResultSrc, RegWrite, JumpSel,
                 StallF, StallD, FlushD, FlushE, ForwardAE, ForwardBE,
                 op, funct3, funct7_5
-                Rs1D, Rs2D, Rs1E, Rs2E, RdE, PCSrcE, ResultSrcE0, RdM, RdW);
+                Rs1D, Rs2D, Rs1E, Rs2E, RdE, PCSrcE, ResultSrcE0, RdM, RdW, RegWriteM, RegWriteW);
     
     input clk, rst;
     input MemWrite, ALUSrc, RegWrite, Jump, JumpSel;
@@ -14,7 +14,7 @@ module Datapath(clk, rst,
     output [2:0] funct3;
     output [6:0] funct7_5;
     output [4:0] Rs1D, Rs2D, Rs1E, Rs2E, RdE, RdM, RdW;
-    output PCSrcE, ResultSrcE0;
+    output PCSrcE, ResultSrcE0, RegWriteM, RegWriteW;
 
     import PipeDefinitions::*;
 
@@ -34,7 +34,7 @@ module Datapath(clk, rst,
     logic [31:0] RD1E, RD2E, PCE, ExtImmE, PCPlus4E;
     logic [31:0] SrcAE, SrcBE, WriteDataE, ALUResultE;
     logic [31:0] PCTargetE;
-    logic MemWriteE, ALUSrcE, RegWriteE, BranchE, JumpE, JumpSelE;
+    logic MemWriteE, ALUSrcE, BranchE, JumpE, JumpSelE;
     logic [1:0] ResultSrcE;
     logic [2:0] ALUControlE;
     logic ZeroE;
@@ -42,7 +42,7 @@ module Datapath(clk, rst,
     EX_MEM EX_MEM_next, EX_MEM_current;
     logic [31:0] ALUResultM, WriteDataM, PCM, PCPlus4M;
     logic [31:0] ReadDataM;
-    logic MemWriteM, RegWriteM;
+    logic MemWriteM;
     logic [1:0] ResultSrcM;
 
     MEM_WB MEM_WB_next, MEM_WB_current;
