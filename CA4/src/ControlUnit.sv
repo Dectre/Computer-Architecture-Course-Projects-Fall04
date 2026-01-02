@@ -23,7 +23,7 @@
 `define ALU_SELB 3'b111
 
 module ControlUnit(op, funct3, funct7_5,
-                   ImmSrc, ALUSrc, ALUControl, Branch, Jump, MemWrite, ResultSrc, RegWrite, JumpSel, Ready);
+                   ImmSrc, ALUSrc, ALUControl, Branch, Jump, MemWrite, ResultSrc, RegWrite, JumpSel);
     input [6:0] op;
     input [2:0] funct3;
     input [6:0] funct7_5;
@@ -31,10 +31,9 @@ module ControlUnit(op, funct3, funct7_5,
     output logic MemWrite, ALUSrc, RegWrite, Jump, JumpSel;
     output logic [1:0] ResultSrc, Branch;
     output logic [2:0] ALUControl, ImmSrc;
-    output logic Ready;
 
     always @(op, funct3, funct7_5) begin
-        {ImmSrc, ALUSrc, ALUControl, Branch, Jump, MemWrite, ResultSrc, RegWrite, JumpSel, Ready} = 16'b0;
+        {ImmSrc, ALUSrc, ALUControl, Branch, Jump, MemWrite, ResultSrc, RegWrite, JumpSel} = 15'b0;
         case (op)
             `OP_R: begin
                 RegWrite = 1'b1;
@@ -106,7 +105,6 @@ module ControlUnit(op, funct3, funct7_5,
                 RegWrite = 1'b1;
             end
 
-            default: Ready = 1'b1;
         endcase
     end
 

@@ -33,8 +33,5 @@ skip_update:
     jal  x0, loop         // Jump back to start of loop
 
 finish:
-    addi x15, x0, 100     // Address to store result (100)
+    addi x15, x0, 400   // Address to store result (100)
     sw   x12, 0(x15)      // Store the Minimum Value at Mem[100]
-
-halt:
-    jal  x0, halt         // Infinite loop to stop the processor

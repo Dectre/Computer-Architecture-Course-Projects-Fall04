@@ -1,18 +1,14 @@
-module RISCV_Top(
-    input clk,
-    input rst
+module RISCV_Top(clk, rst
 );
 
-    // --- Interconnecting Wires ---
-
-    // Control Unit -> Datapath
+    input clk, rst;
+    
     wire [6:0] op;
     wire [2:0] funct3;
     wire [6:0] funct7_5;
     wire MemWrite, ALUSrc, RegWrite, Jump, JumpSel;
     wire [1:0] ResultSrc, Branch;
     wire [2:0] ALUControl, ImmSrc;
-    wire Ready; // Debug signal (Illegal Op)
 
     // Hazard Unit -> Datapath & Control
     wire StallF, StallD, FlushD, FlushE;
@@ -21,11 +17,10 @@ module RISCV_Top(
     // Datapath -> Hazard Unit
     wire [4:0] Rs1D, Rs2D, Rs1E, Rs2E, RdE, RdM, RdW;
     wire PCSrcE, ResultSrcE0;
-    wire RegWriteM, RegWriteW; // **Must be added to Datapath outputs**
-
+    wire RegWriteM, RegWriteW; 
+    
     // --- Module Instantiations ---
 
-    // 1. Control Unit
     ControlUnit Controller (
         .op(op),
         .funct3(funct3),
@@ -38,11 +33,9 @@ module RISCV_Top(
         .MemWrite(MemWrite),
         .ResultSrc(ResultSrc),
         .RegWrite(RegWrite),
-        .JumpSel(JumpSel),
-        .Ready(Ready)
+        .JumpSel(JumpSel)
     );
 
-    // 2. Datapath
     Datapath DP (
         .clk(clk),
         .rst(rst),
@@ -77,7 +70,6 @@ module RISCV_Top(
         .RdW(RdW),
         .PCSrcE(PCSrcE),
         .ResultSrcE0(ResultSrcE0),
-        // Missing Outputs (Please add these to Datapath output list)
         .RegWriteM(RegWriteM),
         .RegWriteW(RegWriteW)
     );

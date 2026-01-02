@@ -1,7 +1,7 @@
 module Datapath(clk, rst,
                 ImmSrc, ALUSrc, ALUControl, Branch, Jump, MemWrite, ResultSrc, RegWrite, JumpSel,
                 StallF, StallD, FlushD, FlushE, ForwardAE, ForwardBE,
-                op, funct3, funct7_5
+                op, funct3, funct7_5,
                 Rs1D, Rs2D, Rs1E, Rs2E, RdE, PCSrcE, ResultSrcE0, RdM, RdW, RegWriteM, RegWriteW);
     
     input clk, rst;
@@ -26,16 +26,16 @@ module Datapath(clk, rst,
     logic [31:0] RD1D, RD2D, ExtImmD;
     logic [4:0] RdD;
     logic [24:0] ImmD;
-    logic MemWriteD, ALUSrcD, RegWriteD, BranchD, JumpD, JumpSelD;
-    logic [1:0] ResultSrcD;
+    logic MemWriteD, ALUSrcD, RegWriteD, JumpD, JumpSelD;
+    logic [1:0] ResultSrcD, BranchD;
     logic [2:0] ALUControlD, ImmSrcD;
 
     ID_EX ID_EX_next, ID_EX_current;
     logic [31:0] RD1E, RD2E, PCE, ExtImmE, PCPlus4E;
     logic [31:0] SrcAE, SrcBE, WriteDataE, ALUResultE;
     logic [31:0] PCTargetE;
-    logic MemWriteE, ALUSrcE, BranchE, JumpE, JumpSelE;
-    logic [1:0] ResultSrcE;
+    logic MemWriteE, ALUSrcE, JumpE, JumpSelE;
+    logic [1:0] ResultSrcE, BranchE;
     logic [2:0] ALUControlE;
     logic ZeroE;
 
