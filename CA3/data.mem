@@ -1,0 +1,68 @@
+// --- CODE SECTION (Starts at @00) ---
+@00
+// 1. Init R7 = 0
+0000000000101010    // Load @2a (Const 0) -> R0
+1000111000000001    // MoveTo R7
+
+// 2. Init R1 (Sum) = 0
+0000000000101010    // Load @2a (Const 0) -> R0
+1000001000000001    // MoveTo R1
+
+// 3. Init R2 (Counter) = 10
+0000000000101011    // Load @2b (Const 10) -> R0
+1000010000000001    // MoveTo R2
+
+// --- LOOP START (Address @06) ---
+@06
+// 4. Load Array Element (Base Address @20 = 32 dec)
+0000000000100000    // Load @20 -> R0
+
+// 5. Add to Sum
+1000001000000100    // Add R1
+
+// 6. Save Sum to R1
+1000001000000001    // MoveTo R1
+
+// 7. Self-Modifying: Increment Address of Instruction #4
+0000000000000110    // Load @06 (Read Instruction at 06)
+1100000000000001    // Addi 1   (Increment Address part)
+0001000000000110    // Store @06 (Write back)
+
+// 8. Decrement Counter
+1000010000000010    // MoveFrom R2
+1101000000000001    // Subi 1 (Using your opcode 1101)
+1000010000000001    // MoveTo R2
+
+// 9. Check Zero (Branch to Exit @11 = 17 dec)
+0100111000010001    // BranchZ R7, @11
+
+// 10. Jump Loop (Jump to @06)
+0010000000000110    // Jump @06
+
+// --- EXIT (Address @11) ---
+@11
+// 11. Store Result at Address 4000 (@FA0 hex)
+1000001000000010    // MoveFrom R1
+0001111110100000   // Store @64 (Decimal 100)
+
+// 12. Safety Infinite Loop (Jump to self)
+0010000000010010    // Jump @12
+
+
+// --- DATA SECTION (Starts at @20 hex = 32 dec) ---
+@20
+0000000000000001
+0000000000000010
+0000000000000011
+0000000000000100
+0000000000000101
+0000000000000110
+0000000000000111
+0000000000001000
+0000000000001001
+0000000000001010
+
+// Constants
+@2a
+0000000000000000    // Const 0
+0000000000001010    // Const 10 (Loop Count)
