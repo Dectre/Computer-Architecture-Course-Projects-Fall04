@@ -8,8 +8,8 @@ module ALU(A, B, select, result, zero);
               AND = 3'b010,
               OR  = 3'b011,
               XOR = 3'b100,
-              SLT = 3'b101;
-              PASS_A = 3'b110;
+              SLT = 3'b101,
+              PASS_A = 3'b110,
               PASS_B = 3'b111;
     always @(select, A, B) begin
         case (select)
