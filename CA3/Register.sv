@@ -5,7 +5,7 @@ module Register #(parameter N = 16)(d, load, clk, rst, q);
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            q <= N'b0;
+            q <= {N{1'b0}};
         end else if (load) begin
             q <= d;
         end

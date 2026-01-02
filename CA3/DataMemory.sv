@@ -4,10 +4,10 @@ module DataMemory(A, WD, WE, clk, rst, RD);
     input WE, clk, rst;
     output logic [15:0] RD;
 
-    logic [15:0] memory [8191:0];
+    logic [15:0] memory [4095:0];
     always @(posedge clk or posedge rst) begin
         if (rst)
-            $readmemh("data.mem", memory);
+            $readmemb("data.mem", memory);
 		else if (WE) 
             memory[A] <= WD;
 	end

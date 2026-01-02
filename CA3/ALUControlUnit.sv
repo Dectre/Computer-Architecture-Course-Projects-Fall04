@@ -7,37 +7,33 @@
 `define SELB 3'b110
 `define NOP 3'b111
 
-module AluControlUnit (ALUop, func, ALUopc, nop);
-    input [2:0] ALUop; input [8:0] func;
-    output logic [2:0] aluOpc;
+module AluControlUnit (AluOp, func, AluOpc, nop);
+    input [2:0] AluOp; input [8:0] func;
+    output logic [2:0] AluOpc;
     output logic nop;
 
-    always @(ALUop, func) begin
-        aluOpc = 3'b000;
+    always @(AluOp, func) begin
+        AluOpc = 3'b000;
         nop = 1'b0;
 
-        case (ALUop)
-            3'b000:
-                aluOpc = 3'b000;
-            3'b001:
-                aluOpc = 3'b001;
-            3'b010:
-                aluOpc = 3'b010;
-            3'b011:
-                aluOpc = 3'b011;
+        case (AluOp)
+            3'b000: AluOpc = 3'b000;
+            3'b001: AluOpc = 3'b001;
+            3'b010: AluOpc = 3'b010;
+            3'b011: AluOpc = 3'b011;
             3'b100:
                 case (func)
-                    9'b000000100: aluOpc = ADD; // Add
-                    9'b000001000: aluOpc = SUB; // Sub
-                    9'b000010000: aluOpc = AND; // And
-                    9'b000100000: aluOpc = OR; // Or
-                    9'b001000000: aluOpc = NOT; // Not
-                    9'b000000001: begin aluOpc = SELA; end // MoveTo
-                    9'b000000010: aluOpc = SELB; // MoveFrom
-                    9'b010000000: begin aluOpc = NOP; nop = 1'b1; end // Nop
-                    default: aluOpc = 3'b000;
+                    9'b000000100: AluOpc = `ADD;
+                    9'b000001000: AluOpc = `SUB;
+                    9'b000010000: AluOpc = `AND;
+                    9'b000100000: AluOpc = `OR;
+                    9'b001000000: AluOpc = `NOT;
+                    9'b000000001: AluOpc = `SELB;
+                    9'b000000010: AluOpc = `SELA;
+                    9'b010000000: begin AluOpc = `NOP; nop = 1'b1; end
+                    default: AluOpc = 3'b000;
                 endcase
-            default: aluOpc = 3'b000;
+            default: AluOpc = 3'b000;
         endcase
     end
 endmodule
