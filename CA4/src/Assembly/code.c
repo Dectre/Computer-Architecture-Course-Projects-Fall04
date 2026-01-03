@@ -1,21 +1,19 @@
-#include <stdint.h>
-
-#define N 20
-
-int32_t arr[N] = {
-    12, -5, 33, 7, 0, 19, -12, 44, 8, -1,
-    3, 27, 15, 2, -8, 6, 9, -3, 25, 1
-};
+#include <stdio.h>
 
 int main() {
-    for (int i = 0; i < N - 1; i++) {
-        for (int j = 0; j < N - 1 - i; j++) {
-            if (arr[j] > arr[j + 1]) {
-                int32_t temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
+    int array[10] = {5, 12, -1, 16, -2, 3, 8, 0, 9, 20};
+
+    int min_val = array[0];
+
+    for (int i = 1; i < 10; i++) {
+        int current_val = array[i];
+
+        if (current_val < min_val) {
+            min_val = current_val;
         }
     }
+
+    printf("The minimum value is: %d\n", min_val);
+
     return 0;
 }
