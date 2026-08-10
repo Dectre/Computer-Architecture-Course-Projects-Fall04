@@ -3,7 +3,7 @@
 # 🏛️ Computer Architecture Course — Fall 1404 (2025–2026)
 ### Department of Electrical and Computer Engineering — University of Tehran
 
-![SystemVerilog](https://img.shields.io/badge/Language-SystemVerilog-blue.svg?style=for-the-badge&logo=IEEE)
+![SystemVerilog](https://img.shields.io/badge/Language-Verilog-blue.svg?style=for-the-badge&logo=IEEE)
 ![RISC-V](https://img.shields.io/badge/ISA-RISC--V%20(RV32I)-red.svg?style=for-the-badge&logo=riscv)
 ![ModelSim](https://img.shields.io/badge/Simulator-ModelSim-green.svg?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Projects-100%25%20Completed-brightgreen.svg?style=for-the-badge)
