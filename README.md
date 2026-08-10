@@ -1,6 +1,6 @@
-# Computer Architecture Course - Spring 2026 (1405) 🎓
+# Computer Architecture Course - Fall 2025 (1404) 🎓
 
-This repository contains the Computer Assignments for the **Computer Architecture** course, completed in Spring 1405 (2026). It features four major hardware design projects implemented in Verilog, covering neural networks and RISC-V processor architectures.
+This repository contains the Computer Assignments for the **Computer Architecture** course, completed in Fall 1404 (2025). It features four major hardware design projects implemented in Verilog, covering neural networks and RISC-V processor architectures.
 
 ---
 
